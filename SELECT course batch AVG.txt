@@ -1,0 +1,5 @@
+        SELECT course_batch, AVG(problems_solved) AS avg_problems
+        FROM students
+        JOIN programming ON students.student_id = programming.student_id
+        GROUP BY course_batch
+        ORDER BY avg_problems DESC
